@@ -25,6 +25,7 @@ const String kUploadPrescription = 'Upload Prescription';
 const String kQuantityRquired = 'Quantity Required: ';
 const String kAddedToCart = 'Added to Cart';
 const String kAddedToCartDesc = 'Items has been added to cart';
+const String kNoTransactionsFound = 'No transactions found';
 
 const String kNo = 'no';
 const String kEta = 'eta';
