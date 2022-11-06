@@ -23,6 +23,25 @@ class MedicineSearchResult extends StatelessWidget {
 
   List<Widget> generateMedicineCards(MedicineResultDetails resultDetails) {
     List<Widget> medicineCards = [];
+    if (resultDetails.medicineItemsList.isEmpty) {
+      medicineCards.add(
+        const Padding(
+          padding: EdgeInsets.only(
+            top: 30,
+          ),
+          child: Center(
+            child: Text(
+              kNoMedicineFound,
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: Colors.blueAccent,
+                fontSize: 30,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
     for (var item in resultDetails.medicineItemsList) {
       medicineCards.add(MedicineItemWidget(medicineItem: item));
     }

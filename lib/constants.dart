@@ -20,6 +20,7 @@ const String kDispatchedImage = 'assets/dispatched1.jpg';
 const String kOutForDelivery = 'Out for Delivery';
 const String kInTransit = 'In Transit';
 const String kDispatched = 'Dispatched';
+const String kNoMedicineFound = 'No medicine found.\nPlease search again!!';
 
 const String kActiveTransaction = 'Active Transactions';
 const String kLastTransaction = 'Last Transactions';
