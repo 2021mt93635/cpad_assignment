@@ -9,10 +9,10 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(kAppTitle),
+        title: const Text(kAppTitle),
       ),
       drawer: DrawerWidget(),
-      body: Center(
+      body: const Center(
         child: Text("Cart Page"),
       ),
     );

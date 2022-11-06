@@ -67,7 +67,7 @@ class OrderDetailWidget extends StatelessWidget {
             color: const Color.fromARGB(255, 209, 191, 191),
             width: 1,
           ),
-          color: Color.fromARGB(255, 220, 246, 245),
+          color: const Color.fromARGB(255, 220, 246, 245),
           borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(10),
             bottomRight: Radius.circular(10),

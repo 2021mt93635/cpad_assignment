@@ -18,7 +18,7 @@ class OrderMedicine extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(kAppTitle),
+        title: const Text(kAppTitle),
       ),
       drawer: DrawerWidget(),
       body: ListView(children: [
@@ -54,13 +54,6 @@ class OrderMedicine extends StatelessWidget {
       ]),
     );
   }
-
-  // void getMedicineListfromServer() async {
-  //   List<MedicineItem> items = await DataConverter().getMedicineList();
-  //   for (var item in items) {
-  //     print(item);
-  //   }
-  //}
 
   List<MedicineItem> getMedicineList(String searchKeyWord) {
     List<MedicineItem> medicineLists = [];

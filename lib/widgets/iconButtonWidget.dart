@@ -18,14 +18,11 @@ class IconButtonWidget extends StatelessWidget {
         Alert(
           context: context,
           type: AlertType.success,
-          title: "Added to Cart",
-          desc: "Items has been added to cart",
+          title: kAddedToCart,
+          desc: kAddedToCartDesc,
           buttons: [
             DialogButton(
               onPressed: () {
-                // Navigator.pushNamedAndRemoveUntil(
-                //     context, kDashBoard, (route) => false);
-                // Navigator.maybePop(context);
                 Navigator.pushNamed(context, kCartPage);
               },
               width: 120,

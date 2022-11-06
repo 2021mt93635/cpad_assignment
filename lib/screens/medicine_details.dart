@@ -18,7 +18,6 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
   int orderQuantity = 1;
 
   Widget displayPrescriptionUploadIfRequired(bool isPrescriptionRequired) {
-    isPrescriptionRequired = true;
     if (isPrescriptionRequired) {
       return ElevatedButton(
         onPressed: () async {
@@ -70,7 +69,7 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
             ).show();
           }
         },
-        child: Text("Upload Prescription"),
+        child: const Text(kUploadPrescription),
       );
     } else {
       return sizedBox;
@@ -86,36 +85,36 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(kAppTitle),
+          title: const Text(kAppTitle),
         ),
         drawer: DrawerWidget(),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 50,
                 bottom: 15,
               ),
               child: Text(
                 arguments.name,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.blueAccent),
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 1,
             ),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 50,
                 bottom: 50,
               ),
               child: Text(
                 arguments.description,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w400,
                     color: Colors.blueAccent),
@@ -124,18 +123,18 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Quantity Required: ",
+                const Text(
+                  kQuantityRquired,
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                       color: Colors.blueAccent),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 10),
                   child: Text(
                     orderQuantity.toString(),
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.blueAccent),
@@ -149,7 +148,7 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
                       }
                     });
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.add,
                     color: Colors.blueAccent,
                   ),
@@ -162,7 +161,7 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
                       }
                     });
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.remove,
                     color: Colors.blueAccent,
                   ),
@@ -172,7 +171,7 @@ class _MedicineDetailPageState extends State<MedicineDetailPage> {
             displayPrescriptionUploadIfRequired(
                 arguments.isDoctorPrescriptionRequired),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 top: 50,
               ),
               child: IconButtonWidget(

@@ -21,6 +21,20 @@ const String kOutForDelivery = 'Out for Delivery';
 const String kInTransit = 'In Transit';
 const String kDispatched = 'Dispatched';
 const String kNoMedicineFound = 'No medicine found.\nPlease search again!!';
+const String kUploadPrescription = 'Upload Prescription';
+const String kQuantityRquired = 'Quantity Required: ';
+const String kAddedToCart = 'Added to Cart';
+const String kAddedToCartDesc = 'Items has been added to cart';
+
+const String kNo = 'no';
+const String kEta = 'eta';
+const String kStatus = 'status';
+const String kMedicines = 'medicines';
+const String kName = 'name';
+const String kDescription = 'description';
+const String kDoctor = 'doctor';
+const String kStock = 'stock';
+const String kPrice = 'price';
 
 const String kActiveTransaction = 'Active Transactions';
 const String kLastTransaction = 'Last Transactions';

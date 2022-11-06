@@ -16,7 +16,7 @@ class MedicineItemWidget extends StatelessWidget {
       },
       child: Container(
         height: 50,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           left: 15,
           top: 15,
           right: 15,
@@ -29,10 +29,10 @@ class MedicineItemWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 20),
               child: Text(
                 medicineItem.name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 25,
@@ -40,10 +40,10 @@ class MedicineItemWidget extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               child: Text(
                 medicineItem.price.toString(),
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 25,

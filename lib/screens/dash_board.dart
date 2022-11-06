@@ -15,7 +15,7 @@ class DashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(kAppTitle),
+        title: const Text(kAppTitle),
       ),
       drawer: DrawerWidget(),
       body: Center(
@@ -28,11 +28,11 @@ class DashBoard extends StatelessWidget {
                 Navigator.popAndPushNamed(context, kOrderMedicinePage,
                     arguments: await DataConverter().getOrderDetails());
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.medical_services,
                 size: 80,
               ),
-              label: Text(
+              label: const Text(
                 "Order Medicine",
                 style: TextStyle(fontSize: 30),
               ),
@@ -45,11 +45,11 @@ class DashBoard extends StatelessWidget {
               onPressed: () {
                 Navigator.popAndPushNamed(context, kUnderConstructionPage);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.medical_information,
                 size: 80,
               ),
-              label: Text(
+              label: const Text(
                 "Book Doctor",
                 style: TextStyle(
                   fontSize: 30,
@@ -64,11 +64,11 @@ class DashBoard extends StatelessWidget {
               onPressed: () {
                 Navigator.popAndPushNamed(context, kUnderConstructionPage);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.vaccines,
                 size: 80,
               ),
-              label: Text(
+              label: const Text(
                 "Book Lab Test",
                 style: TextStyle(fontSize: 30),
               ),

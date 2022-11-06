@@ -118,18 +118,3 @@ class TransactionSection extends StatelessWidget {
     return orderDetailList;
   }
 }
-
-// OrderDetailWidget(
-//                   displayImage: kOutForDeliveryImage,
-//                   displayContent: kOutForDelivery,
-//                   displayETA: "Today"),
-//               OrderDetailWidget(
-//                 displayImage: kInTransitImage,
-//                 displayContent: kInTransit,
-//                 displayETA: "2 days",
-//               ),
-//               OrderDetailWidget(
-//                 displayImage: kDispatchedImage,
-//                 displayContent: kDispatched,
-//                 displayETA: "5 days",
-//               ),

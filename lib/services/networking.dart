@@ -17,7 +17,8 @@ class ServerData {
       String data = response.body;
       return jsonDecode(data);
     } else {
-      print(response.statusCode);
+      //print(response.statusCode);
+      return response.statusCode.toString();
     }
   }
 }
@@ -50,16 +51,16 @@ class DataConverter {
       List<MedicineItem> dataOrderedMedicines = [];
       (entitlement as Map<String, dynamic>).forEach((key, value) {
         switch (key) {
-          case "no":
+          case kNo:
             dataOrderNo = int.parse(value);
             break;
-          case "eta":
+          case kEta:
             dataEta = int.parse(value);
             break;
-          case "status":
+          case kStatus:
             dataStatus = value.toString();
             break;
-          case "medicines":
+          case kMedicines:
             dataOrderedMedicines =
                 getMedicineDataList((value as List<dynamic>));
             break;
@@ -77,7 +78,7 @@ class DataConverter {
   Future<List<MedicineItem>> getMedicineList(String searchString) async {
     var medicineData = await serverHelper.getMedicinesList();
 
-    List<dynamic> entitlements = medicineData["medicines"];
+    List<dynamic> entitlements = medicineData[kMedicines];
     List<MedicineItem> filteredList = getMedicineDataList(entitlements)
         .where(
           (element) =>
@@ -100,19 +101,19 @@ class DataConverter {
     for (var entitlement in entitlements) {
       (entitlement as Map<String, dynamic>).forEach((key, value) {
         switch (key) {
-          case "name":
+          case kName:
             dataname = value.toString();
             break;
-          case "description":
+          case kDescription:
             datadescription = value.toString();
             break;
-          case "doctor":
+          case kDoctor:
             dataisDoctorPrescriptionRequired = (value == 'true');
             break;
-          case "stock":
+          case kStock:
             datastock = int.parse(value);
             break;
-          case "price":
+          case kPrice:
             dataprice = double.parse(value);
             break;
         }
@@ -128,9 +129,3 @@ class DataConverter {
     return medicineListCollection;
   }
 }
-
-
-// (value as Map<String, dynamic>).forEach((key2, value2) {
-//           print(key2);
-//           print(value2);
-//         });
